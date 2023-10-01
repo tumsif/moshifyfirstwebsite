@@ -8,6 +8,12 @@
   --color-body: #918ca4;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 /**/
 /*typography*/
 html {
@@ -159,4 +165,76 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+/*buttons*/
+
+.btn {
+  border-radius: 40px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  padding: 2rem 3rem; /* 2rem 3rem*/
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.btn--accent {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.btn--accent:hover {
+  background: #ec3000;
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.btn--secondary:hover {
+  background: #00c8eb;
+}
+
+.btn--block {
+  width: 100%;
+  display: inline-block;
+}
+
+.btn--outline {
+  background: #fff;
+  border: 2px solid var(--color-heading);
+  color: var(--color-heading);
+  transition: background 0.5s ease-in-out;
+}
+
+.btn--outline:hover {
+  background: var(--color-heading);
+  color: #fff;
+}
+
+.btn-search {
+  width: 175px;
+  padding: 17px 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-search {
+  fill: #fff;
+  display: inline;
+  margin-right: 10px;
+}
+.icon__search {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
 }
