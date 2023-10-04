@@ -632,3 +632,70 @@ a {
   max-width: 1140px;
   margin: 0 auto;
 }
+
+.nav {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 1rem; /*padding to prevent gap*/
+  align-items: center;
+}
+
+.nav__list {
+  width: 100%;
+  margin: 0;
+}
+
+.nav__item {
+  padding: 0.5rem 2rem;
+  border: 1px solid #222;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+}
+
+.nav__item > a {
+  color: #d2d0db;
+  transition: color 0.3s;
+}
+
+.nav__item > a:hover {
+  color: #fff;
+}
+
+.nav__toggler {
+  opacity: 0.5;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+/*using this technique we further specify 
+and make sure it is the collapsible component
+of navigation bar only*/
+.nav.collapsible--expanded .nav__toggler {
+  opacity: 1;
+  box-shadow: 0 0 0 3px #666;
+  border-radius: 5px;
+}
+
+.nav__brand {
+  transform: translateY(5px);
+}
+
+@media screen and (min-width: 768px) {
+  /*media query for navigation bar for larger devices*/
+  .nav__toggler {
+    display: none;
+  }
+
+  .nav__list {
+    width: auto;
+    display: flex;
+    font-size: 1.6rem;
+  }
+
+  .nav__item {
+    border: 0;
+  }
+}
