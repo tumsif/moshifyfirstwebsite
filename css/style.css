@@ -788,3 +788,24 @@ of navigation bar only*/
   min-width: 350px;
   margin: 0 auto;
 }
+
+/*features*/
+.features {
+  gap: 4rem 2rem;
+  margin: 12rem 0;
+}
+
+.features__heading {
+  margin: 1rem 0;
+}
+
+.features__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  /*feature for switching the contents to alternate*/
+  .features:nth-of-type(even) .features__content {
+    order: 2;
+  }
+}
