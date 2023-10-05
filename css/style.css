@@ -223,7 +223,7 @@ a {
   font-weight: 600;
   margin: 1rem 0;
   outline: 0;
-  padding: 2rem 3rem; /* 2rem 3rem*/
+  padding: 2rem 4vw; /* 2rem 3rem*/
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -270,8 +270,7 @@ a {
 }
 
 .btn-search {
-  width: 175px;
-  padding: 17px 0;
+  padding: 2rem 4vw;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -316,12 +315,14 @@ a {
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
 }
 
 .input-group .btn {
-  margin: 2px;
+  margin: 5px;
 }
-@media screen and(min-width: 1024px) {
+
+@media screen and (min-width: 1024px) {
   .input {
     font-size: 1.5rem;
   }
@@ -738,6 +739,10 @@ of navigation bar only*/
     width: auto;
     display: flex;
     font-size: 1.6rem;
+    /*the following two properties will ensure 
+    that the navigation will display even when the navigation is not expanded*/
+    max-height: 100%;
+    opacity: 1;
   }
 
   .nav__item {
@@ -775,12 +780,13 @@ of navigation bar only*/
   box-shadow: 0 0 30px 20px #e6ebee;
   border: 0;
   margin: 4rem auto;
-  max-width: 76rem;
+  max-width: 67rem;
 }
 
 .block-domain__prices {
+  color: var(--color-heading);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
   font-weight: 600;
